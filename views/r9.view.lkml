@@ -58,12 +58,12 @@ view: r9 {
   }
 
   dimension: cta {
-    type: string
+    type: number
     sql: ${TABLE}."CTA" ;;
   }
 
   dimension: state {
-    type: string
+    map_layer_name: us_states
     sql: ${TABLE}."STATE" ;;
   }
 

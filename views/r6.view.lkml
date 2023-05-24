@@ -58,17 +58,17 @@ view: r6 {
   }
 
   dimension: median {
-    type: string
+    type: number
     sql: ${TABLE}."MEDIAN" ;;
   }
 
   dimension: median_advertised {
-    type: string
+    type: number
     sql: ${TABLE}."MEDIAN ADVERTISED" ;;
   }
 
   dimension: state {
-    type: string
+    map_layer_name: us_states
     sql: ${TABLE}."STATE" ;;
   }
 

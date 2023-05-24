@@ -63,17 +63,17 @@ view: r3 {
   }
 
   dimension: posting_intensity {
-    type: string
+    type: number
     sql: ${TABLE}."posting intensity" ;;
   }
 
   dimension: total {
-    type: string
+    type: number
     sql: ${TABLE}."TOTAL" ;;
   }
 
   dimension: unique {
-    type: string
+    type: number
     sql: ${TABLE}."unique" ;;
   }
 

@@ -53,7 +53,7 @@ view: r5 {
   }
 
   dimension: advertised_wage_trend {
-    type: string
+    type: number
     sql: ${TABLE}."advertised wage trend" ;;
   }
 

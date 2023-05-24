@@ -58,22 +58,22 @@ view: r4 {
   }
 
   dimension: job_postingstotal_employment {
-    type: string
+    type: number
     sql: ${TABLE}."Job postings/total employment" ;;
   }
 
   dimension: state {
-    type: string
+    map_layer_name: us_states
     sql: ${TABLE}."STATE" ;;
   }
 
   dimension: total_employment {
-    type: string
+    type: number
     sql: ${TABLE}."Total employment" ;;
   }
 
   dimension: unique_job_postings {
-    type: string
+    type: number
     sql: ${TABLE}."Unique job postings" ;;
   }
 

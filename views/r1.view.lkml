@@ -58,17 +58,17 @@ view: r1 {
   }
 
   dimension: cpa {
-    type: string
+    type: number
     sql: ${TABLE}."CPA" ;;
   }
 
   dimension: cpc {
-    type: string
+    type: number
     sql: ${TABLE}."CPC" ;;
   }
 
   dimension: cta {
-    type: string
+    type: number
     sql: ${TABLE}."CTA" ;;
   }
 
@@ -78,7 +78,7 @@ view: r1 {
   }
 
   dimension: unique_postings {
-    type: string
+    type: number
     sql: ${TABLE}."Unique Postings" ;;
   }
 

@@ -58,7 +58,7 @@ view: r10 {
   }
 
   dimension: following_number_of_jobs {
-    type: string
+    type: number
     sql: ${TABLE}."Following Number of Jobs" ;;
   }
 
@@ -68,7 +68,7 @@ view: r10 {
   }
 
   dimension: previous_number_of_jobs {
-    type: string
+    type: number
     sql: ${TABLE}."Previous Number of Jobs" ;;
   }
 

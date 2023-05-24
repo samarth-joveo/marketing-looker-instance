@@ -58,12 +58,12 @@ view: r2 {
   }
 
   dimension: hires {
-    type: string
+    type: number
     sql: ${TABLE}."HIRES" ;;
   }
 
   dimension: hiresposting_ratio {
-    type: string
+    type: number
     sql: ${TABLE}."Hires/Posting Ratio" ;;
   }
 
@@ -73,7 +73,7 @@ view: r2 {
   }
 
   dimension: unique_postings {
-    type: string
+    type: number
     sql: ${TABLE}."Unique Postings" ;;
   }
 
