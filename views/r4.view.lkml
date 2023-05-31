@@ -36,11 +36,11 @@ view: r4 {
     label_from_parameter: parameter_value
     type: number
     sql:{% if parameter_value._parameter_value == 'j' %}
-          ${job_postings_total_employment}
+          sum(${job_postings_total_employment})
           {% elsif parameter_value._parameter_value == 'u' %}
-          ${unique_job_postings}
+          sum(${unique_job_postings})
           {% else %}
-          ${total_employment}
+          sum(${total_employment})
           {% endif %};;
   }
 
@@ -87,8 +87,15 @@ view: r4 {
     type: number
     sql: ${TABLE}."Job postings/total employment" ;;
   }
+  measure: above_national_percent {
+    label: "Above National %"
+    type: number
+    sql: (0.84-sum(${job_postings_total_employment}))/sum(${job_postings_total_employment}) ;;
+    value_format: "0.00%"
+  }
 
   dimension: state {
+    type: string
     map_layer_name: us_states
     sql: ${TABLE}."STATE" ;;
   }
