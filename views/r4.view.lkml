@@ -16,8 +16,33 @@ view: r4 {
     sql: ${TABLE}."_AIRBYTE_AB_ID" ;;
   }
 
-  # Dates and timestamps can be represented in Looker using a dimension group of type: time.
-  # Looker converts dates and timestamps to the specified timeframes within the dimension group.
+  parameter: parameter_value {
+    type: unquoted
+    allowed_value: {
+      label: "Job Postings / Total Employment"
+      value: "j"
+    }
+    allowed_value: {
+      label: "Unique Job Postings"
+      value: "u"
+    }
+    allowed_value: {
+      label: "Total Employment"
+      value: "t"
+    }
+
+  }
+  measure: Value {
+    label_from_parameter: parameter_value
+    type: number
+    sql:{% if parameter_value._parameter_value == 'j' %}
+          ${job_postings_total_employment}
+          {% elsif parameter_value._parameter_value == 'u' %}
+          ${unique_job_postings}
+          {% else %}
+          ${total_employment}
+          {% endif %};;
+  }
 
   dimension_group: _airbyte_emitted {
     type: time
@@ -57,7 +82,8 @@ view: r4 {
     sql: ${TABLE}."CATEGORY" ;;
   }
 
-  dimension: job_postingstotal_employment {
+  dimension: job_postings_total_employment {
+    label: "Job Postings / Total Employment"
     type: number
     sql: ${TABLE}."Job postings/total employment" ;;
   }
