@@ -52,6 +52,11 @@ view: r7 {
     sql: ${TABLE}."_AIRBYTE_R7_HASHID" ;;
   }
 
+  dimension: category {
+    type: string
+    sql: ${TABLE}."CATEGORY" ;;
+  }
+
   dimension: state {
     type: string
     map_layer_name: us_states
@@ -59,7 +64,7 @@ view: r7 {
   }
 
   dimension: value {
-    type: string
+    type: number
     sql: ${TABLE}."VALUE" ;;
   }
 
