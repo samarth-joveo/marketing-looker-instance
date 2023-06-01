@@ -33,3 +33,5 @@ explore: r6 {}
 explore: r7 {}
 
 explore: r9 {}
+
+explore: sankey_sample {}
