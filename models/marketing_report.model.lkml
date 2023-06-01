@@ -30,4 +30,6 @@ explore: r5 {}
 
 explore: r6 {}
 
+explore: r7 {}
+
 explore: r9 {}
