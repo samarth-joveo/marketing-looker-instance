@@ -57,24 +57,24 @@ view: r10 {
     sql: ${TABLE}."CATEGORY" ;;
   }
 
-  dimension: following_number_of_jobs {
-    type: number
-    sql: ${TABLE}."Following Number of Jobs" ;;
-  }
-
   dimension: following_occupation {
     type: string
-    sql: ${TABLE}."Following occupation" ;;
+    sql: ${TABLE}."Following Occupation" ;;
   }
 
-  dimension: previous_number_of_jobs {
-    type: number
-    sql: ${TABLE}."Previous Number of Jobs" ;;
+  dimension: occupation {
+    type: string
+    sql: ${TABLE}."OCCUPATION" ;;
   }
 
   dimension: previous_occupation {
     type: string
-    sql: ${TABLE}."Previous occupation" ;;
+    sql: ${TABLE}."Previous Occupation" ;;
+  }
+
+  dimension: value {
+    type: number
+    sql: ${TABLE}."VALUE" ;;
   }
 
   measure: count {

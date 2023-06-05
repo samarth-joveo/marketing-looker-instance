@@ -19,7 +19,6 @@ persist_with: marketing_report_default_datagroup
 explore: r1 {}
 
 explore: r10 {}
-
 explore: r2 {}
 
 explore: r3 {}
