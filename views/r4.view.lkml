@@ -104,6 +104,11 @@ view: r4 {
     type: number
     sql: ${TABLE}."Total employment" ;;
   }
+  measure: cpc {
+    label: "CPC"
+    type: sum
+    sql: ${TABLE}.CPC;;
+  }
 
   dimension: unique_job_postings {
     type: number
