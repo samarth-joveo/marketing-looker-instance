@@ -60,11 +60,13 @@ view: r6 {
   dimension: median {
     type: number
     sql: ${TABLE}."MEDIAN" ;;
+    value_format:"$#,##0"
   }
 
   dimension: median_advertised {
     type: number
     sql: ${TABLE}."MEDIAN ADVERTISED" ;;
+    value_format: "$#,##0"
   }
 
   dimension: state {

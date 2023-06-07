@@ -64,6 +64,7 @@ view: r7 {
   }
 
   dimension: value {
+    label: "Nonwhite"
     type: number
     sql: ${TABLE}."VALUE" ;;
   }
