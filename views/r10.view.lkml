@@ -57,14 +57,9 @@ view: r10 {
     sql: ${TABLE}."CATEGORY" ;;
   }
 
-  dimension: following_occupation {
-    type: string
-    sql: ${TABLE}."Following Occupation" ;;
-  }
-
-  dimension: occupation {
-    type: string
-    sql: ${TABLE}."OCCUPATION" ;;
+  dimension: previous_occupation_count {
+    type: number
+    sql: ${TABLE}."Previous Occupation Count" ;;
   }
 
   dimension: previous_occupation {
@@ -72,10 +67,6 @@ view: r10 {
     sql: ${TABLE}."Previous Occupation" ;;
   }
 
-  dimension: value {
-    type: number
-    sql: ${TABLE}."VALUE" ;;
-  }
 
   measure: count {
     type: count
