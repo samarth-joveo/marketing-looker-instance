@@ -8,8 +8,8 @@ include: "/views/**/*.view"
 # use the Quick Help panel on the right to see documentation.
 
 datagroup: marketing_report_default_datagroup {
-  # sql_trigger: SELECT MAX(id) FROM etl_log;;
-  max_cache_age: "1 hour"
+   sql_trigger: SELECT count(*) FROM "ANALYTICS"."MODELLED"."R1";;
+  max_cache_age: "24 hour"
 }
 
 persist_with: marketing_report_default_datagroup
