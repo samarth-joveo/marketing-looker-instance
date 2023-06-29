@@ -9,7 +9,7 @@ include: "/views/**/*.view"
 
 datagroup: marketing_report_default_datagroup {
    sql_trigger: SELECT count(*) FROM "ANALYTICS"."MODELLED"."R1";;
-  max_cache_age: "24 hour"
+  max_cache_age: "1 hour"
 }
 
 persist_with: marketing_report_default_datagroup
