@@ -8,7 +8,7 @@ include: "/views/**/*.view"
 # use the Quick Help panel on the right to see documentation.
 
 datagroup: marketing_report_default_datagroup {
-   sql_trigger: SELECT count(*) FROM "ANALYTICS"."MODELLED"."R1";;
+   #sql_trigger: SELECT count(*) FROM "ANALYTICS"."MODELLED"."R1";;
   max_cache_age: "1 hour"
 }
 
