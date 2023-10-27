@@ -34,3 +34,20 @@ explore: r7 {}
 explore: r9 {}
 
 explore: sankey_sample {}
+
+explore: sheet1 {}
+
+explore: sheet10 {}
+explore: sheet2 {}
+
+explore: sheet3 {}
+
+explore: sheet4 {}
+
+explore: sheet5 {}
+
+explore: sheet6 {}
+
+explore: sheet7 {}
+
+explore: sheet9 {}
