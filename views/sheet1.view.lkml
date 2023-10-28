@@ -51,7 +51,7 @@ view: sheet1 {
   }
 
   measure: unique_postings_m {
-    type: sum
+    type: number
     sql: ${TABLE}."Unique Postings" ;;
   }
 
