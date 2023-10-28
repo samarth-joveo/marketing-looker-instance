@@ -49,6 +49,17 @@ view: sheet1 {
     type: string
     sql: ${TABLE}."Unique Postings" ;;
   }
+
+  measure: unique_postings_m {
+    type: sum
+    sql: ${TABLE}."Unique Postings" ;;
+  }
+
+  measure: cpc_m {
+    type: average
+    sql: ${TABLE}."CPC" ;;
+  }
+
   measure: count {
     type: count
   }
