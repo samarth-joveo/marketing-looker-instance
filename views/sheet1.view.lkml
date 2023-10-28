@@ -51,12 +51,12 @@ view: sheet1 {
   }
 
   measure: unique_postings_m {
-    type: number
+    type: sum
     sql: ${TABLE}."Unique Postings" ;;
   }
 
   measure: cpc_m {
-    type: number
+    type: average
     sql: ${TABLE}."CPC" ;;
   }
 
