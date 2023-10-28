@@ -56,7 +56,7 @@ view: sheet1 {
   }
 
   measure: cpc_m {
-    type: average
+    type: number
     sql: ${TABLE}."CPC" ;;
   }
 
