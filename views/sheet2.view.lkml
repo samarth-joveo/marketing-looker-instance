@@ -35,8 +35,13 @@ view: sheet2 {
     sql: ${TABLE}."_AIRBYTE_SHEET2_HASHID" ;;
   }
 
-  dimension: cpc {
+  dimension: cpc_d {
     type: string
+    sql: ${TABLE}."CPC" ;;
+  }
+
+  measure: cpc {
+    type: average
     sql: ${TABLE}."CPC" ;;
   }
 
