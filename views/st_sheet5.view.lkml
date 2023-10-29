@@ -67,6 +67,7 @@ view: st_sheet5 {
 
   dimension: location {
     type: string
+    map_layer_name: us_states
     sql: ${TABLE}."LOCATION" ;;
   }
   measure: count {
