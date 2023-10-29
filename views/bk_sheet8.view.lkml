@@ -35,13 +35,14 @@ view: bk_sheet8 {
     sql: CAST(${TABLE}."_AIRBYTE_NORMALIZED_AT" AS TIMESTAMP_NTZ) ;;
   }
 
-  dimension: job_postingstotal_employment {
-    type: string
+  measure: job_postingstotal_employment {
+    type: average
     sql: ${TABLE}."Job postings/total employment" ;;
   }
 
   dimension: location {
     type: string
+    map_layer_name: us_states
     sql: ${TABLE}."LOCATION" ;;
   }
   measure: count {
