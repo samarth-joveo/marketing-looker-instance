@@ -40,10 +40,16 @@ view: bk_sheet10 {
     sql: ${TABLE}."Previous occupation" ;;
   }
 
-  dimension: transitions {
+  dimension: transitions_d {
     type: string
     sql: ${TABLE}."TRANSITIONS" ;;
   }
+
+  measure: transitions {
+    type: sum
+    sql: ${TABLE}."TRANSITIONS" ;;
+  }
+
   measure: count {
     type: count
   }
