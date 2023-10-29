@@ -35,23 +35,24 @@ view: dd_sheet8 {
     sql: CAST(${TABLE}."_AIRBYTE_NORMALIZED_AT" AS TIMESTAMP_NTZ) ;;
   }
 
-  dimension: job_postingstotal_employment {
-    type: string
+  measure: job_postingstotal_employment {
+    type: average
     sql: ${TABLE}."Job postings/total employment" ;;
   }
 
   dimension: location {
     type: string
+    map_layer_name: us_states
     sql: ${TABLE}."LOCATION" ;;
   }
 
-  dimension: total_employment {
-    type: string
+  measure: total_employment {
+    type: sum
     sql: ${TABLE}."Total employment" ;;
   }
 
-  dimension: unique_job_postings {
-    type: string
+  measure: unique_job_postings {
+    type: sum
     sql: ${TABLE}."Unique job postings" ;;
   }
   measure: count {

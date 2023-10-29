@@ -35,13 +35,13 @@ view: dd_sheet7 {
     sql: CAST(${TABLE}."_AIRBYTE_NORMALIZED_AT" AS TIMESTAMP_NTZ) ;;
   }
 
-  dimension: hires_ {
-    type: string
+  measure: hires_ {
+    type: sum
     sql: ${TABLE}."Hires " ;;
   }
 
-  dimension: hiringposting_ratio {
-    type: string
+  measure: hiringposting_ratio {
+    type: average
     sql: ${TABLE}."Hiring/posting ratio" ;;
   }
 
@@ -50,8 +50,8 @@ view: dd_sheet7 {
     sql: ${TABLE}."MONTH" ;;
   }
 
-  dimension: unique_posts {
-    type: string
+  measure: unique_posts {
+    type: sum
     sql: ${TABLE}."Unique posts" ;;
   }
   measure: count {

@@ -42,16 +42,17 @@ view: cl_sheet7 {
 
   dimension: location {
     type: string
+    map_layer_name: us_states
     sql: ${TABLE}."LOCATION" ;;
   }
 
-  dimension: total_employment {
-    type: string
+  measure: total_employment {
+    type: sum
     sql: ${TABLE}."Total employment" ;;
   }
 
-  dimension: unique_job_postings {
-    type: string
+  measure: unique_job_postings {
+    type: sum
     sql: ${TABLE}."Unique job postings" ;;
   }
   measure: count {

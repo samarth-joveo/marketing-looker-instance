@@ -11,28 +11,28 @@ view: dd_sheet4 {
     # A dimension is a groupable field that can be used to filter query results.
     # This dimension will be called "1page Apply" in Explore.
 
-  dimension: 1page_apply {
-    type: string
+  measure: 1page_apply {
+    type: average
     sql: ${TABLE}."1-page apply" ;;
   }
 
-  dimension: 2page_apply {
-    type: string
+  measure: 2page_apply {
+    type: average
     sql: ${TABLE}."2-page apply" ;;
   }
 
-  dimension: 3page_apply {
-    type: string
+  measure: 3page_apply {
+    type: average
     sql: ${TABLE}."3-page apply" ;;
   }
 
-  dimension: 4page_apply {
-    type: string
+  measure: 4page_apply {
+    type: average
     sql: ${TABLE}."4-page apply" ;;
   }
 
-  dimension: 5_or_more {
-    type: string
+  measure: 5_or_more {
+    type: average
     sql: ${TABLE}."5 or more" ;;
   }
 
@@ -60,8 +60,8 @@ view: dd_sheet4 {
     sql: CAST(${TABLE}."_AIRBYTE_NORMALIZED_AT" AS TIMESTAMP_NTZ) ;;
   }
 
-  dimension: easy_apply {
-    type: string
+  measure: easy_apply {
+    type: average
     sql: ${TABLE}."Easy apply" ;;
   }
 
@@ -70,8 +70,8 @@ view: dd_sheet4 {
     sql: ${TABLE}."MONTH" ;;
   }
 
-  dimension: unique_postings {
-    type: string
+  measure: unique_postings {
+    type: sum
     sql: ${TABLE}."Unique Postings" ;;
   }
   measure: count {
