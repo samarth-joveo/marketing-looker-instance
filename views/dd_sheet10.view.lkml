@@ -40,8 +40,8 @@ view: dd_sheet10 {
     sql: ${TABLE}."Previous occupation" ;;
   }
 
-  dimension: transition_ {
-    type: string
+  measure: transition_ {
+    type: sum
     sql: ${TABLE}."Transition %" ;;
   }
   measure: count {

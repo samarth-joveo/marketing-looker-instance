@@ -35,13 +35,14 @@ view: clsheet3 {
     sql: CAST(${TABLE}."_AIRBYTE_NORMALIZED_AT" AS TIMESTAMP_NTZ) ;;
   }
 
-  dimension: msa_cpc_avg {
-    type: string
+  measure: msa_cpc_avg {
+    type: average
     sql: ${TABLE}."MSA CPC Avg" ;;
   }
 
   dimension: msa_name {
     type: string
+    map_layer_name: us_counties_fips
     sql: ${TABLE}."MSA Name" ;;
   }
   measure: count {

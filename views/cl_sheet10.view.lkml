@@ -40,8 +40,8 @@ view: cl_sheet10 {
     sql: ${TABLE}."Previous occupation" ;;
   }
 
-  dimension: transition_percentage {
-    type: string
+  measure: transition_percentage {
+    type: sum
     sql: ${TABLE}."TRANSITION_PERCENTAGE" ;;
   }
   measure: count {
