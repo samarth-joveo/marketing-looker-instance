@@ -35,7 +35,7 @@ view: el_sheet8 {
     sql: CAST(${TABLE}."_AIRBYTE_NORMALIZED_AT" AS TIMESTAMP_NTZ) ;;
   }
 
-  measure: job_postingstotal_employment {
+  measure: job_postings {
     type: average
     sql: ${TABLE}."Job postings/total employment" ;;
   }
