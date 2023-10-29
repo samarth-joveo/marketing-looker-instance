@@ -35,13 +35,19 @@ view: bk_sheet3 {
     sql: CAST(${TABLE}."_AIRBYTE_NORMALIZED_AT" AS TIMESTAMP_NTZ) ;;
   }
 
-  dimension: msa_cpc_avg {
+  dimension: msa_cpc_avg_d {
     type: string
+    sql: ${TABLE}."MSA CPC Avg" ;;
+  }
+
+  measure: msa_cpc_avg {
+    type: average
     sql: ${TABLE}."MSA CPC Avg" ;;
   }
 
   dimension: msa_name {
     type: string
+    map_layer_name: us_zipcode_tabulation_areas
     sql: ${TABLE}."MSA Name" ;;
   }
   measure: count {
