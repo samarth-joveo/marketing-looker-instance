@@ -47,10 +47,7 @@ view: r1 {
     sql: CAST(${TABLE}."_AIRBYTE_NORMALIZED_AT" AS TIMESTAMP_NTZ) ;;
   }
 
-  dimension: _airbyte_r1_hashid {
-    type: string
-    sql: ${TABLE}."_AIRBYTE_R1_HASHID" ;;
-  }
+
 
   dimension: category {
     type: string
