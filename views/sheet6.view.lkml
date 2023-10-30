@@ -11,28 +11,28 @@ view: sheet6 {
     # A dimension is a groupable field that can be used to filter query results.
     # This dimension will be called "1page Apply" in Explore.
 
-  dimension: 1page_apply {
-    type: string
+  measure: 1page_apply {
+    type: average
     sql: ${TABLE}."1-Page Apply" ;;
   }
 
-  dimension: 2page_apply {
-    type: string
+  measure: 2page_apply {
+    type: average
     sql: ${TABLE}."2-Page Apply" ;;
   }
 
-  dimension: 3page_apply {
-    type: string
+  measure: 3page_apply {
+    type: average
     sql: ${TABLE}."3-Page Apply" ;;
   }
 
-  dimension: 4page_apply {
-    type: string
+  measure: 4page_apply {
+    type: average
     sql: ${TABLE}."4-Page Apply" ;;
   }
 
-  dimension: 5_or_more {
-    type: string
+  measure: 5_or_more {
+    type: average
     sql: ${TABLE}."5 or more" ;;
   }
 
@@ -60,17 +60,17 @@ view: sheet6 {
     sql: ${TABLE}."_AIRBYTE_SHEET6_HASHID" ;;
   }
 
-  dimension: easy_apply {
-    type: string
+  measure: easy_apply {
+    type: average
     sql: ${TABLE}."Easy Apply" ;;
   }
 
-  dimension: msa_name {
+  dimension: MSA {
     type: string
     sql: ${TABLE}."MSA Name" ;;
   }
   measure: count {
     type: count
-    drill_fields: [msa_name]
+    drill_fields: [MSA]
   }
 }

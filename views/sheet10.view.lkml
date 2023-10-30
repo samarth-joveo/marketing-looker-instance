@@ -40,13 +40,13 @@ view: sheet10 {
     sql: ${TABLE}."Previous occupation" ;;
   }
 
-  dimension: transitions {
-    type: string
+  measure: transitions {
+    type: sum
     sql: ${TABLE}."TRANSITIONS" ;;
   }
 
-  dimension: transitions_percentage {
-    type: string
+  measure: transitions_percentage {
+    type: sum
     sql: ${TABLE}."transitions percentage" ;;
   }
   measure: count {

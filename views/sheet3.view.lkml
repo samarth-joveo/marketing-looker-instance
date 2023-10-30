@@ -35,17 +35,17 @@ view: sheet3 {
     sql: ${TABLE}."_AIRBYTE_SHEET3_HASHID" ;;
   }
 
-  dimension: msa_cpc_avg {
-    type: string
+  measure: CPC {
+    type: average
     sql: ${TABLE}."MSA CPC Avg" ;;
   }
 
-  dimension: msa_name {
+  dimension: MSA {
     type: string
     sql: ${TABLE}."MSA Name" ;;
   }
   measure: count {
     type: count
-    drill_fields: [msa_name]
+    drill_fields: [MSA]
   }
 }

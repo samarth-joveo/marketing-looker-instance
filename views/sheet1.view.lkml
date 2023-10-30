@@ -35,27 +35,17 @@ view: sheet1 {
     sql: ${TABLE}."_AIRBYTE_SHEET1_HASHID" ;;
   }
 
-  dimension: cpc {
-    type: string
-    sql: ${TABLE}."CPC" ;;
-  }
-
   dimension: month {
     type: string
     sql: ${TABLE}."MONTH" ;;
   }
 
-  dimension: unique_postings {
-    type: string
-    sql: ${TABLE}."Unique Postings" ;;
-  }
-
-  measure: unique_postings_m {
+  measure: unique_postings {
     type: sum
     sql: ${TABLE}."Unique Postings" ;;
   }
 
-  measure: cpc_m {
+  measure: CPC {
     type: average
     sql: ${TABLE}."CPC" ;;
   }

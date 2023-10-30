@@ -40,8 +40,8 @@ view: sheet9 {
     sql: ${TABLE}."LOCATION" ;;
   }
 
-  dimension: median_wage {
-    type: string
+  measure: median_wage {
+    type: median
     sql: ${TABLE}."MEDIAN WAGE" ;;
   }
   measure: count {

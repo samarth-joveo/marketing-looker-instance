@@ -40,8 +40,8 @@ view: sheet8 {
     sql: ${TABLE}."_AIRBYTE_SHEET8_HASHID" ;;
   }
 
-  dimension: job_postingstotal_employment {
-    type: string
+  measure: Job_postings_to_total_employment_ratio {
+    type: average
     sql: ${TABLE}."Job postings/total employment" ;;
   }
 
@@ -50,13 +50,13 @@ view: sheet8 {
     sql: ${TABLE}."LOCATION" ;;
   }
 
-  dimension: total_employment {
-    type: string
+  measure: total_employment {
+    type: sum
     sql: ${TABLE}."Total employment" ;;
   }
 
-  dimension: unique_job_postings {
-    type: string
+  measure: unique_job_postings {
+    type: sum
     sql: ${TABLE}."Unique job postings" ;;
   }
   measure: count {

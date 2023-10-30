@@ -35,13 +35,13 @@ view: sheet7 {
     sql: ${TABLE}."_AIRBYTE_SHEET7_HASHID" ;;
   }
 
-  dimension: hires {
-    type: string
+  measure: hires {
+    type: sum
     sql: ${TABLE}."HIRES" ;;
   }
 
-  dimension: hiresposting_ratio {
-    type: string
+  measure: hiresposting_ratio {
+    type: average
     sql: ${TABLE}."Hires/Posting Ratio" ;;
   }
 
@@ -50,8 +50,8 @@ view: sheet7 {
     sql: ${TABLE}."MONTH" ;;
   }
 
-  dimension: unique_postings {
-    type: string
+  measure: unique_postings {
+    type: sum
     sql: ${TABLE}."Unique Postings" ;;
   }
   measure: count {
