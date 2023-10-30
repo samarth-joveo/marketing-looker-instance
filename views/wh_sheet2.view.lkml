@@ -1,8 +1,8 @@
-# The name of this view in Looker is "Na Sheet2"
-view: na_sheet2 {
+# The name of this view in Looker is "Wh Sheet2"
+view: wh_sheet2 {
   # The sql_table_name parameter indicates the underlying database table
   # to be used for all fields in this view.
-  sql_table_name: "MODELLED"."NA_SHEET2" ;;
+  sql_table_name: "MODELLED"."WH_SHEET2" ;;
 
   # No primary key is defined for this view. In order to join this view in an Explore,
   # define primary_key: yes on a dimension that has no repeated values.
@@ -24,25 +24,24 @@ view: na_sheet2 {
     sql: CAST(${TABLE}."_AIRBYTE_EMITTED_AT" AS TIMESTAMP_NTZ) ;;
   }
 
-  dimension: _airbyte_na_sheet2_hashid {
-    type: string
-    sql: ${TABLE}."_AIRBYTE_NA_SHEET2_HASHID" ;;
-  }
-
   dimension_group: _airbyte_normalized {
     type: time
     timeframes: [raw, time, date, week, month, quarter, year]
     sql: CAST(${TABLE}."_AIRBYTE_NORMALIZED_AT" AS TIMESTAMP_NTZ) ;;
   }
 
-  measure: CPC {
-    type: average
+  dimension: _airbyte_wh_sheet2_hashid {
+    type: string
+    sql: ${TABLE}."_AIRBYTE_WH_SHEET2_HASHID" ;;
+  }
+
+  dimension: cpc {
+    type: string
     sql: ${TABLE}."CPC" ;;
   }
 
   dimension: location {
     type: string
-    map_layer_name: us_states
     sql: ${TABLE}."LOCATION" ;;
   }
   measure: count {

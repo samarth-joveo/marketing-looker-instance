@@ -40,8 +40,8 @@ view: na_sheet10 {
     sql: ${TABLE}."Previous occupation" ;;
   }
 
-  dimension: transistion_percentage {
-    type: string
+  measure: transistion_percentage {
+    type: sum
     sql: ${TABLE}."Transistion Percentage" ;;
   }
   measure: count {
