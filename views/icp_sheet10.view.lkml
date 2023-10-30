@@ -40,8 +40,8 @@ view: icp_sheet10 {
     sql: ${TABLE}."Previous occupation" ;;
   }
 
-  dimension: transition_percentage {
-    type: string
+  measure: transition_percentage {
+    type: sum
     sql: ${TABLE}."Transition Percentage" ;;
   }
   measure: count {

@@ -37,11 +37,12 @@ view: lpn_sheet9 {
 
   dimension: location {
     type: string
+    map_layer_name: us_states
     sql: ${TABLE}."LOCATION" ;;
   }
 
-  dimension: median_wage {
-    type: string
+  measure: median_wage {
+    type: median
     sql: ${TABLE}."MEDIAN WAGE" ;;
   }
   measure: count {

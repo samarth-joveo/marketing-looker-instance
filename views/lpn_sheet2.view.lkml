@@ -35,13 +35,14 @@ view: lpn_sheet2 {
     sql: CAST(${TABLE}."_AIRBYTE_NORMALIZED_AT" AS TIMESTAMP_NTZ) ;;
   }
 
-  dimension: cpc {
-    type: string
+  measure: CPC {
+    type: average
     sql: ${TABLE}."CPC" ;;
   }
 
   dimension: location {
     type: string
+    map_layer_name: us_states
     sql: ${TABLE}."LOCATION" ;;
   }
   measure: count {

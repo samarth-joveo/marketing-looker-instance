@@ -40,8 +40,8 @@ view: lpn_sheet10 {
     sql: ${TABLE}."Previous Occupations" ;;
   }
 
-  dimension: transition_percentage {
-    type: string
+  measure: transition_percentage {
+    type: sum
     sql: ${TABLE}."Transition Percentage" ;;
   }
   measure: count {
