@@ -40,7 +40,7 @@ view: bk_sheet1 {
     sql: ${TABLE}."CPC" ;;
   }
 
-  measure: cpc {
+  measure: CPC {
     type: average
     sql: ${TABLE}."CPC" ;;
   }
