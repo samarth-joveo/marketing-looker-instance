@@ -37,6 +37,7 @@ view: sheet9 {
 
   dimension: location {
     type: string
+    map_layer_name: us_states
     sql: ${TABLE}."LOCATION" ;;
   }
 
