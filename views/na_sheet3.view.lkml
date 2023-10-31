@@ -35,13 +35,14 @@ view: na_sheet3 {
     sql: CAST(${TABLE}."_AIRBYTE_NORMALIZED_AT" AS TIMESTAMP_NTZ) ;;
   }
 
-  dimension: cpc {
-    type: string
+  measure: CPC {
+    type: average
     sql: ${TABLE}."CPC" ;;
   }
 
   dimension: msa_name {
     type: string
+    map_layer_name: us_states
     sql: ${TABLE}."MSA Name" ;;
   }
   measure: count {
