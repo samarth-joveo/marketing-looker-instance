@@ -35,12 +35,13 @@ view: wh_sheet2 {
     sql: ${TABLE}."_AIRBYTE_WH_SHEET2_HASHID" ;;
   }
 
-  dimension: cpc {
-    type: string
+  measure: CPC {
+    type: average
     sql: ${TABLE}."CPC" ;;
   }
 
   dimension: location {
+    map_layer_name: us_states
     type: string
     sql: ${TABLE}."LOCATION" ;;
   }
