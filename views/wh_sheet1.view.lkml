@@ -35,8 +35,8 @@ view: wh_sheet1 {
     sql: ${TABLE}."_AIRBYTE_WH_SHEET1_HASHID" ;;
   }
 
-  dimension: cpc {
-    type: string
+  measure: CPC {
+    type: average
     sql: ${TABLE}."CPC" ;;
   }
 
@@ -45,8 +45,8 @@ view: wh_sheet1 {
     sql: ${TABLE}."MONTH" ;;
   }
 
-  dimension: unique_postings {
-    type: string
+  measure: unique_postings {
+    type: sum
     sql: ${TABLE}."Unique Postings" ;;
   }
   measure: count {

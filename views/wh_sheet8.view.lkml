@@ -35,13 +35,13 @@ view: wh_sheet8 {
     sql: ${TABLE}."_AIRBYTE_WH_SHEET8_HASHID" ;;
   }
 
-  dimension: job_postingstotal_employment {
-    type: string
+  measure: job_postingstotal_employment {
+    type: sum
     sql: ${TABLE}."Job postings/total employment" ;;
   }
 
-  dimension: location {
-    type: string
+  measure: location {
+    type: sum
     sql: ${TABLE}."LOCATION" ;;
   }
   measure: count {

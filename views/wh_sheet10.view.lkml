@@ -35,8 +35,8 @@ view: wh_sheet10 {
     sql: ${TABLE}."_AIRBYTE_WH_SHEET10_HASHID" ;;
   }
 
-  dimension: percentage {
-    type: string
+  measure: percentage {
+    type: sum
     sql: ${TABLE}."PERCENTAGE" ;;
   }
 

@@ -35,8 +35,8 @@ view: wh_sheet3 {
     sql: ${TABLE}."_AIRBYTE_WH_SHEET3_HASHID" ;;
   }
 
-  dimension: msa_cpc_avg {
-    type: string
+  measure: MSA_CPA_AVG {
+    type: sum
     sql: ${TABLE}."MSA CPC Avg" ;;
   }
 
