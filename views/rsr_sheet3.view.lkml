@@ -35,7 +35,7 @@ view: rsr_sheet3 {
     sql: ${TABLE}."_AIRBYTE_RSR_SHEET3_HASHID" ;;
   }
 
-  measure: avg {
+  measure: CPC {
     type: average
     sql: ${TABLE}."AVG" ;;
   }

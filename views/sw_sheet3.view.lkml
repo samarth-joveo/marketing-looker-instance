@@ -35,7 +35,7 @@ view: sw_sheet3 {
     sql: ${TABLE}."_AIRBYTE_SW_SHEET3_HASHID" ;;
   }
 
-  measure: avg {
+  measure: CPC {
     type: average
     sql: ${TABLE}."AVG" ;;
   }
