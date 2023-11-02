@@ -42,6 +42,7 @@ view: fpw_sheet3 {
 
   dimension: msa_name {
     type: string
+    map_layer_name: us_states
     sql: ${TABLE}."MSA Name" ;;
   }
   measure: count {

@@ -12,27 +12,27 @@ view: wh_sheet6 {
     # This dimension will be called "1page Apply" in Explore.
 
   measure: 1page_apply {
-    type: sum
+    type: average
     sql: ${TABLE}."1-Page Apply" ;;
   }
 
   measure: 2page_apply {
-    type: sum
+    type: average
     sql: ${TABLE}."2-Page Apply" ;;
   }
 
   measure: 3page_apply {
-    type: sum
+    type: average
     sql: ${TABLE}."3-Page Apply" ;;
   }
 
   measure: 4page_apply {
-    type: sum
+    type: average
     sql: ${TABLE}."4-Page Apply" ;;
   }
 
   measure: 5_or_more {
-    type: sum
+    type: average
     sql: ${TABLE}."5 or more" ;;
   }
 
@@ -61,12 +61,13 @@ view: wh_sheet6 {
   }
 
   measure: easy_apply {
-    type: sum
+    type: average
     sql: ${TABLE}."Easy Apply" ;;
   }
 
-  measure: msa_name {
-    type: sum
+  dimension: msa_name {
+    type: string
+    map_layer_name: us_states
     sql: ${TABLE}."MSA Name" ;;
   }
   measure: count {

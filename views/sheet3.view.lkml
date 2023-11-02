@@ -42,6 +42,7 @@ view: sheet3 {
 
   dimension: MSA {
     type: string
+    map_layer_name: us_states
     sql: ${TABLE}."MSA Name" ;;
   }
   measure: count {

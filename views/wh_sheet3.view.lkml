@@ -35,13 +35,14 @@ view: wh_sheet3 {
     sql: ${TABLE}."_AIRBYTE_WH_SHEET3_HASHID" ;;
   }
 
-  measure: MSA_CPA_AVG {
-    type: sum
+  measure: CPA {
+    type: average
     sql: ${TABLE}."MSA CPC Avg" ;;
   }
 
   dimension: msa_name {
     type: string
+    map_layer_name: us_states
     sql: ${TABLE}."MSA Name" ;;
   }
   measure: count {

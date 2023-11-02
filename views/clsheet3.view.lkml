@@ -42,7 +42,7 @@ view: clsheet3 {
 
   dimension: msa_name {
     type: string
-    map_layer_name: us_counties_fips
+    map_layer_name: us_states
     sql: ${TABLE}."MSA Name" ;;
   }
   measure: count {
