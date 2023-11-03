@@ -40,8 +40,9 @@ view: wh_sheet8 {
     sql: ${TABLE}."Job postings/total employment" ;;
   }
 
-  measure: location {
-    type: sum
+  dimension: location {
+    type: string
+    map_layer_name: us_states
     sql: ${TABLE}."LOCATION" ;;
   }
   measure: count {
