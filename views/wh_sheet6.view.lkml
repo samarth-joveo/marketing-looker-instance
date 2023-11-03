@@ -65,8 +65,8 @@ view: wh_sheet6 {
     sql: ${TABLE}."Easy Apply" ;;
   }
 
-  measure: msa_name {
-    type: sum
+  dimension: msa_name {
+    type: string
     sql: ${TABLE}."MSA Name" ;;
   }
   measure: count {
