@@ -11,22 +11,22 @@ view: el_sheet4 {
     # A dimension is a groupable field that can be used to filter query results.
     # This dimension will be called "1page Apply" in Explore.
 
-  measure: 1page_apply {
+  measure: 1_page_apply {
     type: average
     sql: ${TABLE}."1-page apply" ;;
   }
 
-  measure: 2page_apply {
+  measure: 2_page_apply {
     type: average
     sql: ${TABLE}."2-page apply" ;;
   }
 
-  measure: 3page_apply {
+  measure: 3_page_apply {
     type: average
     sql: ${TABLE}."3-page apply" ;;
   }
 
-  measure: 4page_apply {
+  measure: 4_page_apply {
     type: average
     sql: ${TABLE}."4-page apply" ;;
   }
