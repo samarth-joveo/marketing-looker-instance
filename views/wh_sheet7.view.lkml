@@ -42,7 +42,7 @@ view: wh_sheet7 {
 
   measure: hiringposting_ratio {
     type: average
-    sql: ${TABLE}."Hiring to Posting Ratio" ;;
+    sql: ${TABLE}."HIRING_POSTING_RATIO" ;;
   }
 
   dimension: month {
