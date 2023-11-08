@@ -13,27 +13,27 @@ view: wh_sheet5 {
 
   measure: 1_page_apply {
     type: average
-    sql: ${TABLE}."1-Page Apply" ;;
+    sql: ${TABLE}."1 Page Apply" ;;
   }
 
   measure: 2_page_apply {
     type: average
-    sql: ${TABLE}."2-Page Apply" ;;
+    sql: ${TABLE}."2 Page Apply" ;;
   }
 
   measure: 3_page_apply {
     type: average
-    sql: ${TABLE}."3-Page Apply" ;;
+    sql: ${TABLE}."3 Page Apply" ;;
   }
 
   measure: 4_page_apply {
     type: average
-    sql: ${TABLE}."4-Page Apply" ;;
+    sql: ${TABLE}."4 Page Apply" ;;
   }
 
   measure: 5_or_more {
     type: average
-    sql: ${TABLE}."5 or more" ;;
+    sql: ${TABLE}."5 or More" ;;
   }
 
   measure: _airbyte_ab_id {
