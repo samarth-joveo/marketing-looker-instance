@@ -35,7 +35,7 @@ view: fpw_sheet8 {
     sql: CAST(${TABLE}."_AIRBYTE_NORMALIZED_AT" AS TIMESTAMP_NTZ) ;;
   }
 
-  measure: job_postings_to_total_employment_ratio {
+  measure: Demand_Supply_Ratio {
     type: average
     sql: ${TABLE}."Job postings/total employment" ;;
   }

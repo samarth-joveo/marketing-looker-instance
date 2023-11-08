@@ -35,7 +35,7 @@ view: bk_sheet8 {
     sql: CAST(${TABLE}."_AIRBYTE_NORMALIZED_AT" AS TIMESTAMP_NTZ) ;;
   }
 
-  measure: Job_postingsToTotal_employmentRatio {
+  measure: Demand_Supply_Ratio {
     type: average
     sql: ${TABLE}."Job postings/total employment" ;;
   }

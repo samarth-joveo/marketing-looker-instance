@@ -40,7 +40,7 @@ view: sheet8 {
     sql: ${TABLE}."_AIRBYTE_SHEET8_HASHID" ;;
   }
 
-  measure: Job_postings_to_total_employment_ratio {
+  measure: Demand_Supply_Ratio {
     type: average
     sql: ${TABLE}."Job postings/total employment" ;;
   }
