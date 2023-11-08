@@ -41,7 +41,7 @@ view: wh_sheet7 {
   }
 
   measure: hiringposting_ratio {
-    type: sum
+    type: average
     sql: ${TABLE}."Hiring/posting ratio" ;;
   }
 

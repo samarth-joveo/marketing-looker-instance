@@ -12,27 +12,27 @@ view: wh_sheet4 {
     # This dimension will be called "1page Apply" in Explore.
 
   measure: 1_page_apply {
-    type: sum
+    type: average
     sql: ${TABLE}."1-Page Apply" ;;
   }
 
   measure: 2_page_apply {
-    type: sum
+    type: average
     sql: ${TABLE}."2-Page Apply" ;;
   }
 
   measure: 3_page_apply {
-    type: sum
+    type: average
     sql: ${TABLE}."3-Page Apply" ;;
   }
 
   measure: 4_page_apply {
-    type: sum
+    type: average
     sql: ${TABLE}."4-Page Apply" ;;
   }
 
   measure: 5_or_more {
-    type: sum
+    type: average
     sql: ${TABLE}."5 or more" ;;
   }
 
@@ -61,7 +61,7 @@ view: wh_sheet4 {
   }
 
   measure: easy_apply {
-    type: sum
+    type: average
     sql: ${TABLE}."Easy Apply" ;;
   }
 
