@@ -37,7 +37,7 @@ view: wh_sheet8 {
 
   measure: job_postings_to_total_employment_ratio {
     type: average
-    sql: ${TABLE}."Job postings/total employment" ;;
+    sql: ${TABLE}."Demand Supply Ratio" ;;
   }
 
   dimension: location {
