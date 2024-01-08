@@ -42,7 +42,7 @@ view: sheet1 {
 
   measure: unique_postings {
     type: sum
-    sql: ${TABLE}."Unique Postings" ;;
+    sql: ${TABLE}."UNIQUE POSTINGS" ;;
   }
 
   measure: CPC {
