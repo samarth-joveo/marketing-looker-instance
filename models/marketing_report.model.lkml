@@ -340,3 +340,4 @@ explore: sw_sheet8 {}
 explore: sw_sheet9 {}
 
 explore: og {}
+explore: m_wage {}
