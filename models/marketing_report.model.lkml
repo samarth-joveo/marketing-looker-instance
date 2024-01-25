@@ -343,3 +343,6 @@ explore: og {}
 explore: m_wage {}
 explore: dns {}
 explore: dsr {}
+explore: cpc {}
+explore: u_cpc {}
+explore: u_cpa {}
