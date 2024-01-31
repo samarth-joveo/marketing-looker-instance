@@ -34,7 +34,7 @@ view: m_wage {
     sql: ${TABLE}."CATEGORY" ;;
   }
 
-  measure: median_wage {
+  measure: Median_Wage_in_USD {
     type: sum
     sql: ${TABLE}."MEDIAN_WAGE" ;;
   }
