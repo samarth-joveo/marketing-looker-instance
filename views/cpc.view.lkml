@@ -34,7 +34,7 @@ view: cpc {
     sql: ${TABLE}."CATEGORY" ;;
   }
 
-  measure: cpc_in_usd {
+  measure: CPC_in_USD {
     type: average
     sql: ${TABLE}."CPC_" ;;
   }
